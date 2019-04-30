@@ -14,13 +14,20 @@ spring:
     port: 6379
     password: 
     database: 0
-    jedis:      pool:        min-idle: 5        max-wait: 2        max-idle: 30        max-active: 30    timeout: 1500
+    jedis:
+      pool:
+        min-idle: 5
+        max-wait: 2
+        max-idle: 30
+        max-active: 30
+    timeout: 1500
   mvc:
     static-path-pattern: /**
   resources:
     static-locations: file:${path.filelocation},file:${path.htmllocation}
   servlet:
-    multipart:      max-file-size: 20971520
+    multipart:
+      max-file-size: 20971520
       max-request-size: 209715200
 server:
   port: 8083
